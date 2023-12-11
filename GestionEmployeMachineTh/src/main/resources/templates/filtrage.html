@@ -1,0 +1,33 @@
+<!-- employee-machines.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Machines</title>
+</head>
+<body>
+    <h1>Employee: ${employee.name}</h1>
+    <h2>Machines:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marque</th>
+                <th>Référence</th>
+                <th>Date d'Achat</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through machines -->
+            <tr th:each="machine : ${machines}">
+                <td th:text="${machine.id}"></td>
+                <td th:text="${machine.marque}"></td>
+                <td th:text="${machine.reference}"></td>
+                <td th:text="${machine.dateAchat}"></td>
+                <td th:text="${machine.prix}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
